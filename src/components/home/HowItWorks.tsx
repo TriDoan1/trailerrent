@@ -23,32 +23,36 @@ const steps = [
 
 export function HowItWorks() {
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="bg-white py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold text-navy-900 tracking-tight">
+        <div className="mb-12 text-center">
+          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-orange-500">
+            Simple process
+          </p>
+          <h2 className="mt-2 text-2xl font-bold tracking-tight text-navy-900 sm:text-3xl">
             How It Works
           </h2>
-          <p className="text-gray-600 mt-2 max-w-xl mx-auto">
+          <p className="mx-auto mt-2 max-w-xl text-gray-600">
             Renting a trailer shouldn&apos;t be complicated. Three simple steps
             and you&apos;re on the road.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+        <div className="mx-auto grid max-w-5xl gap-8 md:grid-cols-3">
           {steps.map((step, i) => {
             const Icon = step.icon;
             return (
-              <div key={step.title} className="relative flex flex-col items-center text-center">
-                <div className="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center mb-4">
-                  <Icon className="w-8 h-8 text-orange-500" />
+              <div
+                key={step.title}
+                className="relative rounded-3xl border border-gray-100 bg-gray-50 px-6 py-8 text-center shadow-sm"
+              >
+                <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-orange-100">
+                  <Icon className="h-8 w-8 text-orange-500" />
                 </div>
-                <h3 className="text-lg font-bold text-navy-900 mb-2">
-                  {step.title}
-                </h3>
+                <h3 className="text-lg font-bold text-navy-900">{step.title}</h3>
                 <p className="text-sm text-gray-600">{step.description}</p>
                 {i < steps.length - 1 && (
-                  <div className="hidden md:block absolute top-8 left-[calc(50%+48px)] w-[calc(100%-96px)] h-px bg-gray-300" />
+                  <div className="absolute left-[calc(50%+88px)] top-16 hidden h-px w-[calc(100%-176px)] bg-gray-300 md:block" />
                 )}
               </div>
             );

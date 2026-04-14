@@ -285,6 +285,11 @@ export function TrailerDetailContent({ trailer }: { trailer: Trailer }) {
     setCheckedVehicleLabel(`${vehicle.year} ${vehicle.make} ${vehicle.model}`);
   }
 
+  function handleUnlistedVehicle() {
+    setTowResult("unknown");
+    setCheckedVehicleLabel("Unlisted vehicle");
+  }
+
   function toggleAccessory(accessoryId: string) {
     setSelectedAccessoryIds((current) =>
       current.includes(accessoryId)
@@ -557,6 +562,14 @@ export function TrailerDetailContent({ trailer }: { trailer: Trailer }) {
               </select>
             </label>
           </div>
+
+          <button
+            type="button"
+            onClick={handleUnlistedVehicle}
+            className="mt-4 text-sm font-semibold text-gray-500 underline decoration-gray-300 underline-offset-4 transition-colors hover:text-orange-500 hover:decoration-orange-500"
+          >
+            My vehicle isn&apos;t listed
+          </button>
 
           <div className="mt-4 flex flex-wrap items-center gap-3">
             <Button onClick={handleTowCheck}>Check compatibility</Button>
