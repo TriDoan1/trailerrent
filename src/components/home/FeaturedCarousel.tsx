@@ -10,6 +10,7 @@ export function FeaturedCarousel() {
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
   const featured = getFeaturedTrailers();
+  const showControls = canScrollLeft || canScrollRight;
 
   function updateScrollState() {
     const container = scrollRef.current;
@@ -70,24 +71,26 @@ export function FeaturedCarousel() {
               short-notice projects.
             </p>
           </div>
-          <div className="hidden sm:flex gap-2">
-            <button
-              onClick={() => scroll("left")}
-              className="rounded-lg border border-gray-300 p-2 text-gray-600 transition-colors hover:border-gray-400 hover:bg-white disabled:cursor-not-allowed disabled:border-gray-200 disabled:text-gray-300"
-              aria-label="Scroll left"
-              disabled={!canScrollLeft}
-            >
-              <ChevronLeft className="w-5 h-5" />
-            </button>
-            <button
-              onClick={() => scroll("right")}
-              className="rounded-lg border border-gray-300 p-2 text-gray-600 transition-colors hover:border-gray-400 hover:bg-white disabled:cursor-not-allowed disabled:border-gray-200 disabled:text-gray-300"
-              aria-label="Scroll right"
-              disabled={!canScrollRight}
-            >
-              <ChevronRight className="w-5 h-5" />
-            </button>
-          </div>
+          {showControls ? (
+            <div className="hidden gap-2 sm:flex">
+              <button
+                onClick={() => scroll("left")}
+                className="rounded-lg border border-gray-300 p-2 text-gray-600 transition-colors hover:border-gray-400 hover:bg-white disabled:cursor-not-allowed disabled:border-gray-200 disabled:text-gray-300"
+                aria-label="Scroll left"
+                disabled={!canScrollLeft}
+              >
+                <ChevronLeft className="w-5 h-5" />
+              </button>
+              <button
+                onClick={() => scroll("right")}
+                className="rounded-lg border border-gray-300 p-2 text-gray-600 transition-colors hover:border-gray-400 hover:bg-white disabled:cursor-not-allowed disabled:border-gray-200 disabled:text-gray-300"
+                aria-label="Scroll right"
+                disabled={!canScrollRight}
+              >
+                <ChevronRight className="w-5 h-5" />
+              </button>
+            </div>
+          ) : null}
         </div>
 
         <div
