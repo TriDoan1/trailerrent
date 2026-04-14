@@ -30,7 +30,7 @@ export function Footer() {
                 TrailerRent
               </span>
             </Link>
-            <p className="text-sm text-gray-400 mb-4">
+            <p className="text-sm text-gray-300 mb-4">
               Quality trailer rentals for every job. Serving the greater
               Portland area since 2019.
             </p>
@@ -59,7 +59,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-gray-400 hover:text-white transition-colors"
+                    className="text-sm text-gray-300 hover:text-white transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -77,7 +77,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-gray-400 hover:text-white transition-colors"
+                    className="text-sm text-gray-300 hover:text-white transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -90,7 +90,7 @@ export function Footer() {
             <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
               Hours
             </h3>
-            <div className="space-y-2 text-sm text-gray-400">
+            <div className="space-y-2 text-sm text-gray-300">
               <p>Mon – Fri: 7am – 6pm</p>
               <p>Saturday: 8am – 4pm</p>
               <p>Sunday: 9am – 2pm</p>
@@ -98,7 +98,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-navy-700 mt-10 pt-6 text-center text-sm text-gray-400">
+        <div className="border-t border-navy-700 mt-10 pt-6 text-center text-sm text-gray-300">
           &copy; {new Date().getFullYear()} TrailerRent. All rights reserved.
         </div>
       </div>
