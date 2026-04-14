@@ -2,15 +2,6 @@
   "cleanUrls": true,
   "headers": [
     {
-      "source": "/(.*)\\.(?:avif|css|gif|ico|jpg|jpeg|js|mjs|png|svg|ttf|otf|webp|woff|woff2)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
-      ]
-    },
-    {
       "source": "/(.*)",
       "headers": [
         {
