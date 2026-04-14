@@ -11,7 +11,7 @@ export function StepIndicator({
 }: StepIndicatorProps) {
   return (
     <div className="rounded-3xl border border-gray-100 bg-white p-5 shadow-sm">
-      <div className="flex items-start gap-3 overflow-x-auto">
+      <div className="grid gap-4 md:flex md:items-start md:gap-3 md:overflow-x-auto">
         {labels.map((label, index) => {
           const step = index + 1;
           const isActive = currentStep === step;
@@ -20,7 +20,7 @@ export function StepIndicator({
           return (
             <div
               key={label}
-              className="flex min-w-0 flex-1 items-center gap-3"
+              className="flex min-w-0 items-center gap-3 md:flex-1"
             >
               <div className="flex items-center gap-3">
                 <div
@@ -39,7 +39,7 @@ export function StepIndicator({
                     Step {step}
                   </p>
                   <p
-                    className={`truncate text-sm font-semibold ${
+                    className={`text-sm font-semibold md:truncate ${
                       isActive || isComplete ? "text-navy-900" : "text-gray-500"
                     }`}
                   >

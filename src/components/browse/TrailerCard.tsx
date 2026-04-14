@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { MapPin, Star } from "lucide-react";
 import { Badge } from "@/components/ui/Badge";
@@ -23,9 +24,14 @@ export function TrailerCard({ trailer }: TrailerCardProps) {
       className="group block bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow"
     >
       <div className="aspect-[4/3] bg-navy-700 relative overflow-hidden">
-        <div className="absolute inset-0 flex items-center justify-center text-gray-400">
-          <MapPin className="w-10 h-10 opacity-30" />
-        </div>
+        <Image
+          src={trailer.photos[0]}
+          alt={trailer.name}
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
+        />
+        <div className="absolute inset-0 bg-linear-to-t from-navy-900/70 via-navy-900/15 to-transparent" />
         <div className="absolute top-3 left-3">
           <Badge variant="orange">{typeLabels[trailer.type] || trailer.type}</Badge>
         </div>
@@ -34,6 +40,17 @@ export function TrailerCard({ trailer }: TrailerCardProps) {
             <Badge variant="success">Popular</Badge>
           </div>
         )}
+        <div className="absolute inset-x-4 bottom-4 flex items-end justify-between gap-3 text-white">
+          <div className="min-w-0">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-orange-100">
+              Ready to reserve
+            </p>
+            <p className="mt-1 line-clamp-2 text-sm font-medium text-white/90">
+              {trailer.tagline}
+            </p>
+          </div>
+          <MapPin className="h-5 w-5 shrink-0 text-orange-100/80" />
+        </div>
       </div>
       <div className="p-4">
         <h3 className="font-bold text-navy-900 group-hover:text-orange-500 transition-colors mb-1">
