@@ -6,9 +6,6 @@ import { Card } from "@/components/ui/Card";
 import { activeRentals, rentalHistory } from "@/data/rentals";
 import { getTrailerById } from "@/data/trailers";
 
-const rentalPhotoBlurDataUrl =
-  "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 11'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='8' y1='0' x2='8' y2='11' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%230F1B2D'/%3E%3Cstop offset='0.6' stop-color='%2321456A'/%3E%3Cstop offset='1' stop-color='%23F1D2A4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='16' height='11' fill='url(%23g)'/%3E%3Cpath d='M0 7L3 6.1L5.8 6.5L8.2 5.2L11.3 5.9L13.7 4.7L16 5.1V11H0V7Z' fill='%231E3A5F'/%3E%3Cpath d='M0 9.1C2.2 8.8 4.1 8.8 6.2 9.2C8.1 9.6 10.2 10.4 12.4 10.3C13.8 10.2 14.9 9.8 16 9.5V11H0V9.1Z' fill='%232E2B30'/%3E%3C/svg%3E";
-
 function formatDate(value: string) {
   return new Intl.DateTimeFormat("en-US", {
     month: "short",
@@ -59,11 +56,9 @@ export default function MyRentalsPage() {
               <Card key={rental.id} className="rounded-3xl">
                 <div className="relative aspect-[16/10] overflow-hidden rounded-[1.5rem] border border-gray-100">
                   <Image
-                    src="/images/hero-trailer-road.svg"
+                    src={trailer.photos[0]}
                     alt={`${trailer.name} staged for pickup`}
                     fill
-                    placeholder="blur"
-                    blurDataURL={rentalPhotoBlurDataUrl}
                     sizes="(max-width: 1024px) 100vw, 32vw"
                     className="object-cover"
                   />

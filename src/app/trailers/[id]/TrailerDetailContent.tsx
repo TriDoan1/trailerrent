@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import {
@@ -322,8 +323,16 @@ export function TrailerDetailContent({ trailer }: { trailer: Trailer }) {
       <section className="grid gap-8 lg:grid-cols-[1.3fr_0.7fr]">
         <div className="space-y-4">
           <div className="overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-sm">
-            <div className="relative flex aspect-[16/10] items-end overflow-hidden bg-linear-to-br from-navy-900 via-navy-700 to-orange-500 p-6">
-              <div className="absolute inset-0 opacity-25 [background-image:radial-gradient(circle_at_top_left,white,transparent_45%),linear-gradient(135deg,transparent,rgba(255,255,255,0.3))]" />
+            <div className="relative flex aspect-[16/10] items-end overflow-hidden p-6">
+              <Image
+                src={trailer.photos[activePhoto]}
+                alt={`${trailer.name} photo ${activePhoto + 1}`}
+                fill
+                sizes="(max-width: 1024px) 100vw, 60vw"
+                className="object-cover"
+                priority
+              />
+              <div className="absolute inset-0 bg-linear-to-t from-navy-950/80 via-navy-900/20 to-transparent" />
               <div className="relative max-w-lg text-white">
                 <p className="text-xs font-semibold uppercase tracking-[0.3em] text-orange-100">
                   Gallery view {activePhoto + 1}
@@ -332,7 +341,7 @@ export function TrailerDetailContent({ trailer }: { trailer: Trailer }) {
                   {trailer.name}
                 </h1>
                 <p className="mt-3 text-sm text-orange-100 sm:text-base">
-                  {trailer.photos[activePhoto] ?? trailer.tagline}
+                  {trailer.tagline}
                 </p>
               </div>
             </div>
@@ -344,16 +353,29 @@ export function TrailerDetailContent({ trailer }: { trailer: Trailer }) {
                 key={photo}
                 type="button"
                 onClick={() => setActivePhoto(index)}
-                className={`rounded-2xl border p-4 text-left transition-colors ${
+                className={`overflow-hidden rounded-2xl border text-left transition-colors ${
                   activePhoto === index
                     ? "border-orange-500 bg-orange-100"
                     : "border-gray-100 bg-white hover:border-orange-500"
                 }`}
               >
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gray-400">
-                  Photo {index + 1}
-                </p>
-                <p className="mt-2 text-sm font-semibold text-navy-900">{photo}</p>
+                <div className="relative aspect-[4/3]">
+                  <Image
+                    src={photo}
+                    alt={`${trailer.name} thumbnail ${index + 1}`}
+                    fill
+                    sizes="(max-width: 640px) 100vw, 20vw"
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-4">
+                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gray-400">
+                    Photo {index + 1}
+                  </p>
+                  <p className="mt-2 text-sm font-semibold text-navy-900">
+                    {index === activePhoto ? "Currently selected" : "Tap to preview"}
+                  </p>
+                </div>
               </button>
             ))}
           </div>

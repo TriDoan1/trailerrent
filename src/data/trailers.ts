@@ -9,9 +9,9 @@ export const trailers: Trailer[] = [
     description:
       "Our most popular enclosed trailer — ideal for apartment moves, furniture delivery, or protecting cargo from the elements. Features a rear ramp door for easy loading, interior tie-down points, and LED lighting.",
     photos: [
-      "/images/trailers/enclosed-6x12-1.jpg",
-      "/images/trailers/enclosed-6x12-2.jpg",
-      "/images/trailers/enclosed-6x12-3.jpg",
+      "/images/trailers/beehive-b.jpg",
+      "/images/trailers/enclosed-a.jpg",
+      "/images/trailers/travel-b.jpg",
     ],
     dimensions: { lengthFt: 12, widthFt: 6, heightFt: 6 },
     payloadCapacityLbs: 2500,
@@ -41,8 +41,8 @@ export const trailers: Trailer[] = [
     description:
       "Extra room for whole-house moves or commercial deliveries. Tandem axle for stability at highway speeds. E-track sidewall system lets you secure cargo quickly and safely.",
     photos: [
-      "/images/trailers/enclosed-7x16-1.jpg",
-      "/images/trailers/enclosed-7x16-2.jpg",
+      "/images/trailers/enclosed-a.jpg",
+      "/images/trailers/beehive-b.jpg",
     ],
     dimensions: { lengthFt: 16, widthFt: 7, heightFt: 7 },
     payloadCapacityLbs: 4200,
@@ -73,8 +73,8 @@ export const trailers: Trailer[] = [
     description:
       "A workhorse utility trailer with mesh sides and a fold-down gate. Great for landscaping debris, appliance pickups, or weekend projects. Light enough for most SUVs.",
     photos: [
-      "/images/trailers/utility-5x10-1.jpg",
-      "/images/trailers/utility-5x10-2.jpg",
+      "/images/trailers/utility-a.jpg",
+      "/images/trailers/flatbed-a.jpg",
     ],
     dimensions: { lengthFt: 10, widthFt: 5, heightFt: 2 },
     payloadCapacityLbs: 1800,
@@ -103,8 +103,8 @@ export const trailers: Trailer[] = [
     description:
       "Tandem-axle utility trailer with reinforced steel floor and removable sides. Handles demolition debris, firewood, gravel, and more. Integrated ramps for equipment loading.",
     photos: [
-      "/images/trailers/utility-6x14-1.jpg",
-      "/images/trailers/utility-6x14-2.jpg",
+      "/images/trailers/utility-a.jpg",
+      "/images/trailers/flatbed-a.jpg",
     ],
     dimensions: { lengthFt: 14, widthFt: 6, heightFt: 2 },
     payloadCapacityLbs: 3500,
@@ -134,8 +134,8 @@ export const trailers: Trailer[] = [
     description:
       "Heavy-duty flatbed with full-width loading ramps and stake pockets. Ideal for transporting skid steers, ATVs, palletized freight, or building materials.",
     photos: [
-      "/images/trailers/flatbed-7x18-1.jpg",
-      "/images/trailers/flatbed-7x18-2.jpg",
+      "/images/trailers/flatbed-a.jpg",
+      "/images/trailers/gooseneck-a.jpg",
     ],
     dimensions: { lengthFt: 18, widthFt: 7, heightFt: 0 },
     payloadCapacityLbs: 5000,
@@ -165,8 +165,8 @@ export const trailers: Trailer[] = [
     description:
       "Hydraulic lift dump trailer makes unloading gravel, soil, mulch, and debris effortless. Remote-controlled scissor lift raises the bed up to 45°. Steel sides with integrated tarp hooks.",
     photos: [
-      "/images/trailers/dump-6x10-1.jpg",
-      "/images/trailers/dump-6x10-2.jpg",
+      "/images/trailers/dump-a.jpg",
+      "/images/trailers/flatbed-a.jpg",
     ],
     dimensions: { lengthFt: 10, widthFt: 6, heightFt: 2 },
     payloadCapacityLbs: 4000,
@@ -196,8 +196,8 @@ export const trailers: Trailer[] = [
     description:
       "Open car hauler with slide-out ramps, wheel chocks, and ratchet strap tie-downs. Diamond-plate fenders and LED marker lights. Perfect for track days, purchases, or vehicle relocation.",
     photos: [
-      "/images/trailers/car-hauler-7x18-1.jpg",
-      "/images/trailers/car-hauler-7x18-2.jpg",
+      "/images/trailers/car-hauler-a.webp",
+      "/images/trailers/car-hauler-b.jpg",
     ],
     dimensions: { lengthFt: 18, widthFt: 7, heightFt: 0 },
     payloadCapacityLbs: 5500,
@@ -228,8 +228,8 @@ export const trailers: Trailer[] = [
     description:
       "Lightweight travel trailer with sleeping space for two, a compact kitchenette, and a fold-out dinette. Towable by most midsize SUVs. Perfect for weekend camping trips and road trips.",
     photos: [
-      "/images/trailers/travel-compact-1.jpg",
-      "/images/trailers/travel-compact-2.jpg",
+      "/images/trailers/travel-a.jpg",
+      "/images/trailers/travel-b.jpg",
     ],
     dimensions: { lengthFt: 16, widthFt: 7, heightFt: 8 },
     payloadCapacityLbs: 1200,
@@ -260,8 +260,8 @@ export const trailers: Trailer[] = [
     description:
       "Our smallest trailer — perfect for small pickups, quick dump runs, or hauling a few pieces of furniture. No special license or heavy-duty truck needed.",
     photos: [
-      "/images/trailers/utility-4x6-1.jpg",
-      "/images/trailers/utility-4x6-2.jpg",
+      "/images/trailers/utility-a.jpg",
+      "/images/trailers/flatbed-a.jpg",
     ],
     dimensions: { lengthFt: 6, widthFt: 4, heightFt: 1.5 },
     payloadCapacityLbs: 1000,
@@ -290,8 +290,8 @@ export const trailers: Trailer[] = [
     description:
       "Our largest enclosed trailer — fits a full-size car or truck with room to spare. Climate-sealed interior protects against weather and road debris. Ideal for vehicle transport and trade show setups.",
     photos: [
-      "/images/trailers/enclosed-8x20-1.jpg",
-      "/images/trailers/enclosed-8x20-2.jpg",
+      "/images/trailers/gooseneck-a.jpg",
+      "/images/trailers/enclosed-a.jpg",
     ],
     dimensions: { lengthFt: 20, widthFt: 8, heightFt: 7 },
     payloadCapacityLbs: 5000,

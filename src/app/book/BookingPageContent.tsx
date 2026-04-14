@@ -307,9 +307,9 @@ function BookingFlow({
 
   if (confirmationNumber) {
     return (
-      <div className="mx-auto max-w-5xl px-4 py-10 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-5xl overflow-x-hidden px-4 py-10 sm:px-6 lg:px-8">
         <Card className="overflow-hidden rounded-[2rem] border border-orange-100 p-0 shadow-lg">
-          <div className="bg-gradient-to-r from-navy-900 via-navy-700 to-navy-900 px-8 py-10 text-white">
+          <div className="bg-gradient-to-r from-navy-900 via-navy-700 to-navy-900 px-5 py-10 text-white sm:px-8">
             <div className="flex items-start gap-4">
               <CheckCircle2 className="mt-1 h-10 w-10 text-orange-500" />
               <div>
@@ -327,7 +327,7 @@ function BookingFlow({
             </div>
           </div>
 
-          <div className="grid gap-6 px-8 py-8 lg:grid-cols-[1.2fr_0.8fr]">
+          <div className="grid gap-6 px-5 py-8 sm:px-8 lg:grid-cols-[1.2fr_0.8fr]">
             <Card className="rounded-3xl bg-gray-50">
               <h2 className="text-xl font-bold text-navy-900">
                 Pickup instructions
@@ -411,10 +411,10 @@ function BookingFlow({
   }
 
   return (
-    <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+    <div className="mx-auto max-w-7xl overflow-x-hidden px-4 py-10 sm:px-6 lg:px-8">
       <div className="grid gap-8 lg:grid-cols-[1.15fr_0.85fr]">
-        <div className="space-y-6">
-          <div className="rounded-[2rem] bg-gradient-to-br from-navy-900 via-navy-700 to-navy-900 px-8 py-10 text-white shadow-lg">
+        <div className="min-w-0 space-y-6">
+          <div className="rounded-[2rem] bg-gradient-to-br from-navy-900 via-navy-700 to-navy-900 px-5 py-10 text-white shadow-lg sm:px-8">
             <p className="text-sm font-semibold uppercase tracking-[0.24em] text-orange-100">
               Three-step booking
             </p>
@@ -756,7 +756,7 @@ function BookingFlow({
           </div>
         </div>
 
-        <div>
+        <div className="min-w-0">
           <Card className="sticky top-24 rounded-[2rem] bg-white">
             <p className="text-sm font-semibold uppercase tracking-[0.24em] text-gray-400">
               Selected trailer
