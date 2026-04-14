@@ -19,15 +19,19 @@ export function FeaturedCarousel() {
   }
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="bg-gray-50 py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex items-end justify-between mb-8">
+        <div className="mb-8 flex items-end justify-between gap-6">
           <div>
-            <h2 className="text-2xl sm:text-3xl font-bold text-navy-900 tracking-tight">
+            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-orange-500">
+              Featured fleet
+            </p>
+            <h2 className="mt-2 text-2xl font-bold tracking-tight text-navy-900 sm:text-3xl">
               Featured Trailers
             </h2>
-            <p className="text-gray-600 mt-1">
-              Our most popular rentals, ready for pickup today.
+            <p className="mt-2 max-w-2xl text-gray-600">
+              Four proven rentals customers book first for moves, equipment, and
+              short-notice projects.
             </p>
           </div>
           <div className="hidden sm:flex gap-2">
@@ -50,17 +54,21 @@ export function FeaturedCarousel() {
 
         <div
           ref={scrollRef}
-          className="flex gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-2 -mx-4 px-4 sm:mx-0 sm:px-0"
+          className="scrollbar-hide -mx-4 flex gap-4 overflow-x-auto px-4 pb-2 snap-x snap-mandatory sm:mx-0 sm:px-0"
         >
           {featured.map((trailer) => (
             <div
               key={trailer.id}
-              className="min-w-[280px] sm:min-w-[300px] snap-start flex-shrink-0"
+              className="min-w-[280px] shrink-0 snap-start sm:min-w-[300px]"
             >
               <TrailerCard trailer={trailer} />
             </div>
           ))}
         </div>
+
+        <p className="mt-4 text-sm text-gray-500 sm:hidden">
+          Swipe to compare popular rentals.
+        </p>
       </div>
     </section>
   );

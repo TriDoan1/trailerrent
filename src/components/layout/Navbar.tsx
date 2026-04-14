@@ -35,7 +35,9 @@ export function Navbar() {
                 {link.label}
               </Link>
             ))}
-            <Button size="sm">Get a Quote</Button>
+            <Link href="/about#contact">
+              <Button size="sm">Get a Quote</Button>
+            </Link>
           </div>
 
           <button
@@ -64,9 +66,11 @@ export function Navbar() {
               </Link>
             ))}
             <div className="px-3 pt-2">
-              <Button size="md" className="w-full">
-                Get a Quote
-              </Button>
+              <Link href="/about#contact" onClick={() => setMobileMenuOpen(false)}>
+                <Button size="md" className="w-full">
+                  Get a Quote
+                </Button>
+              </Link>
             </div>
           </div>
         )}
